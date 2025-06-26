@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Character Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ Mythical Hero Creator</h1>
+        <p class="subtitle">Build Your Legendary Character</p>
+        
+        <div class="character-creation">
+            <!-- Step 1: Gender Selection -->
+            <div class="step" id="step1">
+                <h2>⚡ Choose Your Gender</h2>
+                <p class="step-description">How do you identify?</p>
+                <div class="options-grid" id="genderOptions"></div>
+                <button class="next-button" onclick="nextStep(2)">Next: Choose Race</button>
+            </div>
+
+            <!-- Step 2: Race Selection -->
+            <div class="step hidden" id="step2">
+                <h2>🐉 Choose Your Race</h2>
+                <p class="step-description">What mythical being are you?</p>
+                <div class="options-grid" id="raceOptions"></div>
+                <button class="next-button" onclick="nextStep(3)">Next: Choose Role</button>
+            </div>
+
+            <!-- Step 3: Class Selection -->
+            <div class="step hidden" id="step3">
+                <h2>⚔️ Choose Your Role</h2>
+                <p class="step-description">What's your specialty and calling?</p>
+                <div class="options-grid" id="classOptions"></div>
+                <button class="next-button" onclick="nextStep(4)">Next: Choose Background</button>
+            </div>
+
+            <!-- Step 4: Background -->
+            <div class="step hidden" id="step4">
+                <h2>📜 Choose Your Background</h2>
+                <p class="step-description">What did you do before becoming a hero?</p>
+                <div class="options-grid" id="backgroundOptions"></div>
+                <button class="next-button" onclick="nextStep(5)">Next: Roll Stats</button>
+            </div>
+
+            <!-- Step 5: Stats -->
+            <div class="step hidden" id="step5">
+                <h2>🎲 Roll Your Stats</h2>
+                <p class="step-description">Discover your character's natural abilities</p>
+                <button class="big-button" onclick="rollStats()">Roll All Stats!</button>
+                <div id="statsDisplay" class="stats-container"></div>
+                <button class="next-button hidden" onclick="nextStep(6)">Next: Choose Alignment</button>
+            </div>
+
+            <!-- Step 6: Alignment -->
+            <div class="step hidden" id="step6">
+                <h2>⚖️ Choose Your Alignment</h2>
+                <p class="step-description">What's your character's moral compass?</p>
+                <div class="options-grid" id="alignmentOptions"></div>
+                <button class="next-button" onclick="nextStep(7)">Next: Final Details</button>
+            </div>
+
+            <!-- Step 7: Final Character -->
+            <div class="step hidden" id="step7">
+                <h2>🌟 Your Hero is Complete!</h2>
+                <div id="characterSheet" class="character-sheet"></div>
+                <button class="big-button" onclick="generateName()">Generate Random Name</button>
+                <button class="big-button" onclick="generateBackstory()">🤖 Generate AI Backstory</button>
+                <button class="big-button" onclick="startOver()">Create Another Character</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

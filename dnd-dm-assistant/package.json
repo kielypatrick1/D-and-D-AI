@@ -1,0 +1,16 @@
+{
+  "name": "mythical-hero-creator",
+  "version": "1.0.0",
+  "description": "An advanced D&D character creator with AI-powered features",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx netlify dev",
+    "build": "echo 'No build process needed for static site'"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.12"
+  },
+  "keywords": ["dnd", "character-creator", "rpg", "ai", "mythical"],
+  "author": "Your Name",
+  "license": "MIT"
+}
